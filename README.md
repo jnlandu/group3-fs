@@ -73,7 +73,7 @@ The dataset used for this case-study is downloaded from \href{https://www.kaggle
 -  We fit the model and apply the LASSO. It results $45$ features selected. 
 
 
-<img src ="heatmap" alt = "heatmap">
+<img src ="heat-2" alt = "heatmap">
 
 <img src ="Hyperparameter scores.png" alt = "heatmap">
 
