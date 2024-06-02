@@ -45,33 +45,33 @@ The general idea behind hybrid methods is to combine different feature selection
  <img src="1_YcQmBq1Ct61-tnengNuvrQ.webp" alt="embedded">
  <p>  Hybrid Methods method pipeline in the learning process. Credit: <a href="https://towardsdatascience.com/beginners-guide-for-feature-selection-by-a-beginner-cd2158c5c36a">Tamjid Ahsan </a> in Towards Data Science. <p>
 
-
-
 ## Challenges in Feature Selection
-Feature selection is a crucial step in machine learning that offers many benefits, but it also comes with challenges. One of them is dealing with redundant features, which can occur when features are similar or correlated, leading to multicollinearity. This can negatively impact the model's performance and interpretability.
+Athough FS is a crucial step in machine learning that offers many benefits, but it also comes with challenges. One of them is dealing with redundant features, which can occur when features are similar or correlated, leading to multicollinearity. This can negatively impact the model's performance and interpretability.
 
 According to [10], most feature selection methods address the dependency problem but often fail to ensure the optimality of the feature subset. Efficient feature selection must balance relevance and redundancy removal, which requires careful evaluation and validation.
 Moreover, several other challenges complicate the feature selection process and are specially data-based:
-
-
+- *Structured Data*:   Handling structured data (e.g time series data) requires feature selection methods to account for temporal dependencies and the inherent hierarchical relationships in the data.
+- *Linked Data*: In domains like social networks or biological data, features are often interconnected, and selecting features must consider these links to avoid losing important 
+- etc.
 
 
 ## Feature selection using the Least Absolute Shrinkage and Selection Operator (LASSO)
-In the following lines we describe the LASSO method for linear models before using it for feature selection the next section.
-
-Assume that the learning task is to predict a variable $Y$ from $p$ other features $X_1, \ldots, X_p$, given the dataset $\mathcal{D}=(X_i, y_i), i=1, \ldots, n\}$. Roughly speaking, let's assume $\fm D$ is given and 
+Consider the linear model
 \begin{align}
-
-## LASSO formulation
-Considering eq. \ref{eq1}, the LASSO is formulated as the problem consists of finding $\hat{\beta}(t)$ such that
-\begin{align}
-    \hat{\beta}(t) = \underset{\beta\in \mathbb{R}^{p\times 1}}{argmin} \left(\frac{\Vert Y-\b X \beta \Vert^2_2}{n}\right)\;\; \text{ constrained to } \;\sum_{j=1}^p \vert \beta_j\vert < t \label{eq3}
+Y = \mathbb{X}\beta + \epsion, \;\; \epsilon \stackrel{iid}{\sim} \mathcal{N}(0, \sigma^2 I)
 \end{align}
-with $\Vert \cdot \Vert_2$ the euclidean norm of $\mathbb{R}^n$ and $t$ an upper bound for the sum of coefficients. This problem is equivalent to writing
-\begin{align}
-    \hat{\beta}(\lambda) = \underset{\beta\in \mathbb{R}^{p\times 1}}{argmin} \left(\frac{\Vert Y-\b X \beta \Vert^2_2}{n} + \lambda \sum_{j=1}^p \vert \beta_j\vert\right) \label{eq4}
-\end{align}
-with $\lambda \geq 0$ is a tuning parameter that balances the model fit and the shrinkage.
+### LASSO formulation
+The  LASSO  consists of finding $\hat{\beta}(t)$ such that
+
+$$
+\hat{\beta}(\lambda) = \underset{\beta\in \mathbb{R}^{p\times 1}}{argmin} \left(\frac{\Vert Y-\boldsymbol{ X} \beta \Vert^2_2}{n} + \lambda \sum_{j=1}^p \vert \beta_j\vert\right)
+$$
+
+
+with $\Vert \cdot \Vert_2$ the euclidean norm of $\mathbb{R}^n$ an $\lambda \geq 0$ is a tuning parameter that balances the model fit and the shrinkage.
+
+
+When solving problem  \ref{eq3} or \ref{eq4}, some coefficient of $\hat{\beta}(\lambda)$, say $\hat{\beta}(\lambda)_j$, shrinks to zero, then the corresponding features can be excluded from the model. Accordingly, the LASSO serves as  a feature selection method.
 
 ## Case study:
 In this section we showcase the implementation of the LASSO as a feature selection method  on a real dataset.  
