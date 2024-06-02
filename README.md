@@ -7,7 +7,10 @@ This is the repository for the feature selection project, a class assignment whe
 ## Feature selections(FS):
 The FS methods can be categorized in three: supervised, unsupervised, and semi-supervised. They all 3 depend on the learning task being solved.
 
-<img src="chart1" alt="chart1">
+
+
+
+ </p>
 
 ## Feature Selection Methods:
 
@@ -17,6 +20,9 @@ i.e. model-agnostic. They assess feature importance based on statistical propert
 between features and the target variable. Typically, these methods rank features according to criteria
 such as correlation, statistical significance, and information gain, filtering out low-ranking features
 and retaining the most relevant ones. 
+
+<img src="1_MO2JGos1gZnyfQueFrzzsw.png" alt="chart1">
+<p> Filter method pipeline in the learning process. Credit: <a href="https://towardsdatascience.com/beginners-guide-for-feature-selection-by-a-beginner-cd2158c5c36a">Tamjid Ahsan </a> in Towards Data Science. <p>
 
 ## Wrapper Methods
 Wrapper methods are a class of feature selection techniques that evaluate and select features based on85
