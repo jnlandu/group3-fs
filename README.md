@@ -6,7 +6,8 @@ This is the repository for the feature selection project, a class assignment whe
 
 ## Feature selections(FS):
 The FS methods can be categorized in three: supervised, unsupervised, and semi-supervised. They all 3 depend on the learning task being solved.
-
+<img src="feature-selection-techniques-in-machine-learning2.webp" alt = "fs-categories">
+<p> Feature Selection classess. Credit: <a href=" https://i0.wp.com/blog.knoldus.com/wp-content/uploads/2022/02/feature-selection-techniques-in-machine-learning2.png?resize=550%2C367&ssl=1 ">Tanishka Garg  </a></p>
 
 
 ## Feature Selection Methods:
