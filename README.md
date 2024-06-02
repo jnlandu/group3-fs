@@ -61,7 +61,7 @@ Consider the linear model
 Y = \mathbb{X}\beta + \epsion, \;\; \epsilon \stackrel{iid}{\sim} \mathcal{N}(0, \sigma^2 I)
 \end{align}
 ### LASSO formulation
-The  LASSO  consists of finding $\hat{\beta}(t)$ such that
+The  LASSO  consists of finding $\hat{\beta}(\lambda)$ such that
 
 $$
 \hat{\beta}(\lambda) = \underset{\beta\in \mathbb{R}^{p\times 1}}{argmin} \left(\frac{\Vert Y-\boldsymbol{ X} \beta \Vert^2_2}{n} + \lambda \sum_{j=1}^p \vert \beta_j\vert\right)
@@ -86,8 +86,9 @@ The dataset used for this case-study is downloaded from \href{https://www.kaggle
 
 
 <img src ="heat-2.png" alt = "heatmap">
-
+<p> Heatmap: Correlations matrices between features.</p>
 <img src ="Hyperparameter scores.png" alt = "heatmap">
+<p> Optimal choice of $\lambda$, by GridSearch and Cross-validation.</p>
 
 
 ## How to use this repo:
