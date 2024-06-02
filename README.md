@@ -44,6 +44,9 @@ performance is determined
 
  ## Hybrid Methods
 The general idea behind hybrid methods is to combine different feature selection approaches and leverage the strengths of selectors to achieve the best, i.e., optimal, results. For instance, a hybrid method can be constructed by combining filter and wrapper methods. The feature selection process works as follows. First, the entire feature set is ranked by a filter method. Then, the user generates a feature subset usually by heuristically setting a relevance threshold or by simply selecting the top n features. Finally, a wrapper method is employed to further reduce the generated feature subset. The main issue in hybrid methods is the successive use of different feature selection methods increases the computational cost.
+ <img src="1_wHpQhfv2J9IcabwujU9ytg.webp" alt="embedded">
+ <p> Embedded method pipeline in the learning process. Credit: <a href="https://towardsdatascience.com/beginners-guide-for-feature-selection-by-a-beginner-cd2158c5c36a">Tamjid Ahsan </a> in Towards Data Science. <p>
+
 
 
 ## Challenges in Feature Selection
