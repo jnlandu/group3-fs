@@ -33,6 +33,8 @@ model’s performance is measured using specific subsets of the dataset to deter
 of each feature. This process continues with different subsets until the one with the highest learning90
 performance is determined
 
+<img src="1_8Q2Qh2E-g7dRcHwb50l1Rg.webp" alt = "wrapper">
+<p> Wrapper method pipeline in the learning process. Credit: <a href="https://towardsdatascience.com/beginners-guide-for-feature-selection-by-a-beginner-cd2158c5c36a">Tamjid Ahsan </a> in Towards Data Science. <p>
 
 ## Embedded Methods
  Embedded methods are iterative in the sense that takes care of each iteration of the model training process and carefully extract those features which contribute the most to the training for a particular iteration. It encompass the benefits of both the wrapper and filter methods by including interactions of features but also maintaining reasonable computational costs. These methods are faster like those of filter methods and more accurate than the filter methods and take into consideration a combination of features as well. Embedded methods are  also computationally less intensive, less prone to overfitting, and have faster running time as compared with wrappers. Lasso and Ridge regression are the two most common feature selection methods of this type, and Decision tree also creates a model using different types of feature selection. The tree-based classification algorithms, such as Classification and Regression Trees (CART) and Iterative Dichotomiser 3 (ID3) are examples of embedded methods.
