@@ -22,9 +22,10 @@ The ImageNet dataset contains 1.3 million training images (1,300 images per clas
 
 ## Repository Structure
 
-- `train.py`: Contains the training loop and logic for training the ResNet-18 model.
-- `utils.py`: Includes utility functions such as learning rate adjustment and Mixup implementation.
+- `train.py`: Contains the training loop, logic for training the ResNet-18 model and mixup configuration.
+- `utils.py`: Includes utility functions such as display_images and count_parameters.
 - `dataset.py`: Handles data loading, preprocessing, and augmentation for the ImageNet dataset.
+- `args.py`: Contains global variables
 - `main.py`: The main script to set up the training process, including model initialization and configuration.
 - `model.py`: Defines the ResNet-18 architecture.
 
